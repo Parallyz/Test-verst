@@ -1,55 +1,39 @@
 
-body 
+body
     margin: 0
     padding: 0
 
-header 
-    background-image: url("../images/bus-header.png")
-    height: 632px
-    width: 100%
-    background-size: cover
-    background-repeat: no-repeat
-    background-attachment: scroll
-
-ul 
-    list-style-type: none
-    overflow: hidden
-    padding-top: 28px
-    margin: 0
-
-footer 
-    background-color: $primary-color
+footer
+    background-color: $main-color
     height: 293px
 
-%astyle
-    color:$link-color
-    background-color: transparent
-    text-decoration: none
+.benefits
+    margin-top: 35px
+    svg
+        margin: 15px
+    h4
+        position: absolute
+        height: 18.28px
+    p
+        font-family: $main-font-family
+        font-style: normal
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        margin-top: 42px
 
-a:link 
-    @extend %astyle
+.compass-group
+    height: 416px
+    background-color:$main-color
+    .we-are-glad
+        padding-top: 150px
+        margin-left: 15%
+    h2
+        font-size: 40px
+        color: $text-color
+        font-family: $main-font-family
+    h3
+        font-size: 18px
+        color: $text-color
+        font-family: $main-font-family
 
-a:visited 
-    @extend %astyle
-  
-a:hover 
-    @extend %astyle
-    font-size: 22px
-  
-  
-li 
-    margin: auto
-    float: left
-
-.header-navigation  
-    text-decoration: none
-
-.logo 
-    margin-top: 0  
-    font-family: $logo-font-family
-    font-style: normal
-    font-weight: 700
-    font-size: 24px
-    line-height: 28px
-    margin-left: 25%
-   
