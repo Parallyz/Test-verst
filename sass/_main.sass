@@ -1,0 +1,55 @@
+
+body 
+    margin: 0
+    padding: 0
+
+header 
+    background-image: url("../images/bus-header.png")
+    height: 632px
+    width: 100%
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: scroll
+
+ul 
+    list-style-type: none
+    overflow: hidden
+    padding-top: 28px
+    margin: 0
+
+footer 
+    background-color: $primary-color
+    height: 293px
+
+%astyle
+    color:$link-color
+    background-color: transparent
+    text-decoration: none
+
+a:link 
+    @extend %astyle
+
+a:visited 
+    @extend %astyle
+  
+a:hover 
+    @extend %astyle
+    font-size: 22px
+  
+  
+li 
+    margin: auto
+    float: left
+
+.header-navigation  
+    text-decoration: none
+
+.logo 
+    margin-top: 0  
+    font-family: $logo-font-family
+    font-style: normal
+    font-weight: 700
+    font-size: 24px
+    line-height: 28px
+    margin-left: 25%
+   
