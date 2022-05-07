@@ -1,19 +1,19 @@
-header 
-    background-image: url("../images/bus-header.png")
+header
+    background-image: url($bus-header-image)
     height: 632px
     width: 100%
     background-size: cover
     background-repeat: no-repeat
     background-attachment: scroll
-   
-    color:$header-color
-    h1 
+
+    color: $header-color
+    h1
         font-style: normal
         font-weight: 700
         font-size: 48px
         line-height: 58px
         text-align: center
-        margin-top: 166px        
+        margin-top: 106px
     h3
         font-style: normal
         font-weight: 300
@@ -21,44 +21,74 @@ header
         line-height: 24px
         text-align: center
         margin-top: 16px
-    ul 
+    ul
         list-style-type: none
         overflow: hidden
         padding-top: 28px
         margin: 0 0 0 60%
     li
-        margin-right: 7%       
-    svg   
+        margin-right: 7%
+    img
         margin-right: 12px
 
-
-.header-navigation  
-    text-decoration: none  
+.header-navigation
+    text-decoration: none
     margin: auto
     font-style: normal
     font-weight: 300
     font-size: 16px
     line-height: 19px
 
-.logo 
-    margin-top:28px
-    color:$logo-color
-    margin-top: 0  
+.logo
+    margin-top: 28px
+    color: $logo-color
+    margin-top: 0
     font-family: $main-font-family
     font-style: normal
     font-weight: 700
     font-size: 24px
     line-height: 28px
     margin-left: 25%
-    margin-top:28px
+    margin-top: 28px
     position: absolute
-    
 
-a:link 
+a:link
     @extend %a-style
 
-a:visited 
+a:visited
     @extend %a-style
-  
-a:hover 
+
+a:hover
     @extend %a-style
+
+.flight-search
+    height: 150px
+    margin-top: 100px
+    background-color: $logo-color
+    border-radius: 10px
+    padding-top: 40px
+    select
+        height: 50px
+        margin-left: 50px
+    .painted-btn
+        background-color: $main-color
+        color: $text-color
+        border: 0
+        height: 50px
+        border-radius: 5px
+        padding: 12px
+        margin-left: 20%
+    .rows-img
+        padding-left: 8%
+        padding-top: 10px
+    p
+        color: $example-color
+        font-style: normal
+        font-weight: 300
+        font-size: 14px
+        line-height: 16px
+        margin-left: 50px
+        margin-top: 10px
+
+    span
+        color: $main-color
