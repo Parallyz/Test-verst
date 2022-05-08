@@ -1,22 +1,3 @@
-const images = {
-    hamburg_kharkiv: "../images/hamburg-kharkiv.png",
-    kharkiv_venezia: "../images/kharkiv-venezia.png",
-    krakow_odessa: "../images/krakow-odessa.png",
-    kyiv_berlin: "../images/kyiv-berlin.png",
-    lviv_warsaw: "../images/lviv-warsaw.png",
-    prague_chernihiv: "../images/prague-chernihiv.png",
-    rivne_lublin: "../images/rivne-lublin.png",
-    wroclaw_lutsk: "../images/wroclaw-lutsk.png",
-}
-
-class PopularTrip {
-  constructor(fromTo, cost,image) {
-    this.FromTo = fromTo;
-    this.Cost = cost;
-    this.Image = image;
-  }
-}
-
 class Feedback {
     constructor(name, fromTo,date,text,stars) {
       this.FromTo = fromTo;
@@ -28,16 +9,7 @@ class Feedback {
     }
   }
 
-const popularTrips = [
-    new PopularTrip("Київ - Берлін", 2000, images.kyiv_berlin),
-    new PopularTrip("Львів - Варшава", 1000, images.lviv_warsaw),
-    new PopularTrip("Харків - Венеція", 2500, images.kharkiv_venezia),
-    new PopularTrip("Рівне - Люблін", 1750, images.rivne_lublin),
-    new PopularTrip("Гамбург - Харків", 2900, images.hamburg_kharkiv),
-    new PopularTrip("Вроцлав - Луцьк", 1320, images.wroclaw_lutsk),
-    new PopularTrip("Прага - Чернігів", 2100, images.kyiv_berlin),
-    new PopularTrip("Краків - Одеса", 3730, images.krakow_odessa),
-]
+
 
 
 
@@ -56,3 +28,5 @@ const feedbacks = [
     "Жахливо",2)
    
 ]
+
+export default feedbacks

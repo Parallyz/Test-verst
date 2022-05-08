@@ -7,7 +7,9 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    
+
     <link rel="icon" type="image/x-icon" href="">
     <title>Test</title>
 </head>
@@ -48,49 +50,65 @@
             Пасажирські перевезення із України в країни Європи
         </h3>
         <div class="container ">
-            <div class="row flight-search">
-                <div class="col">
-                    <select class="form-select">
-                        <option selected>
+            <div class="flight-search">
+                <div class="row ">
+                    <div class="col padding-to-select">
 
+
+                        <label class="label-to-select-from">
                             Звідки
-                        </option>
+                        </label>
+                        <img class="img-pos" id="from-img" src="./images/from.png" />
+                        <img class="arrow-pos" src="./images/select-arrow.png" />
 
-                    </select>
-                    <p>
-                        Наприклад: <span>Київ, Рівне</span>
-                    </p>
+                        <select>
+
+                            <option value="" disabled selected>Звідки</option>
+                        </select>
+
+                        <p>
+                            Наприклад: <span>Київ, Рівне</span>
+                        </p>
+                    </div>
+                    <div class="col-1 rows-img padding-to-select">
+                        <img src="images/arrows.png" alt="arrows-img" />
+                    </div>
+                    <div class="col padding-to-select">
+                        <label class="label-to-select-to">
+                            Куди
+                        </label>
+                        <img class="img-pos" id="geo-img" src="./images/geo.png" />
+                        <img class="arrow-pos" src="./images/select-arrow.png" />
+
+                        <select>
+
+                            <option value="" disabled selected>Куди</option>
+                        </select>
+                        <p>
+                            Наприклад: <span>Берлін, Венеція</span>
+                        </p>
+                    </div>
+                    <div class="col padding-to-select">
+                        <label class="label-to-select-date">
+                            Дата поїздки
+                        </label>
+                        <img class="img-pos" src="./images/date.png" />
+
+                        <input id="datetime" type="text" placeholder="Всі дні.." />
+                        
+                        <p>
+                            <span>Сьогодні, Завтра, Всі дні</span>
+                        </p>
+                    </div>
+                    <div class="col-2 padding-to-select">
+                        <button class="painted-btn">
+                            <img src="images/loop.png" alt="loop-img" />
+                            Пошук рейсу
+                        </button>
+
+                    </div>
+
                 </div>
-                <div class="col-1 rows-img">
-                    <img src="images/arrows.png" alt="arrows-img" />
-                </div>
-                <div class="col">
-                    <select class="form-select">
-                        <option selected>Куди</option>
-
-                    </select>
-                    <p>
-                        Наприклад: <span>Берлін, Венеція</span>
-                    </p>
-                </div>
-                <div class="col">
-                    <select class="form-select">
-                        <option selected>Всі дні</option>
-
-                    </select>
-                    <p>
-                        <span>Сьогодні, Завтра, Всі дні</span>
-                    </p>
-                </div>
-                <div class="col">
-                    <button class="painted-btn">
-                        <img src="images/loop.png" alt="loop-img" />
-                        Пошук рейсу
-                    </button>
-
-                </div>
-
-
             </div>
 
         </div>
@@ -171,8 +189,8 @@
 
             <div class=" row  d-flex justify-content-around" id="firstrow-popular-section">
 
-              
-               
+
+
 
 
             </div>
@@ -185,322 +203,289 @@
         </div>
     </section>
 
+
+
     <section>
         <div class="container popular-question">
             <h3>
                 Поширені запитання
             </h3>
 
-
             <div class="d-flex justify-content-around">
 
-                <div class="col-4">
-                    <div class="row">
+                <div class="container">
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="row">
 
-                        <div class="col-10">
-                            <p id="text-document-need">
-                                Умови та документи необхідні для проїзду
-                                <br />
-                                через кордон
-                            </p>
+                                <div class="col-10">
+                                    <p id="text-document-need">
+                                        Умови та документи необхідні для проїзду
+                                        <br />
+                                        через кордон
+                                    </p>
+                                </div>
+                                <div class="col-2">
+                                    <button class="btn-more-information" id="btn-document-need"
+                                        data-bs-toggle="collapse" href="#collapseNeededDoc">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseNeededDoc">
+                                <div class="collapse-style">
+                                    Умови та документи необхідні для проїзду
+                                    <br />
+                                    через кордон
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-2">
-                            <button class="btn-more-information" id="btn-document-need" data-bs-toggle="collapse"
-                                href="#collapseNeededDoc">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
+                        <hr />
+                        <div class="row">
+                            <div class="row">
+
+                                <div class="col-10">
+                                    <p id="text-can-change">
+                                        Чи можна змінити дату або час рейсу
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button class="btn-more-information" id="btn-can-change" data-bs-toggle="collapse"
+                                        href="#collapseChangeDate">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseChangeDate">
+                                <div class="collapse-style">
+                                    Чи можна змінити дату або час рейсу
+                                </div>
+                            </div>
                         </div>
+                        <hr />
+                        <div class="row">
+
+                            <div class="row">
+
+                                <div class="col-10">
+                                    <p id="text-time-arrive">
+                                        Час відправки та прибуття
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button class="btn-more-information" id="btn-time-arrive" data-bs-toggle="collapse"
+                                        href="#collapseTimeArrive">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseTimeArrive">
+                                <div class="collapse-style">
+                                    Час відправки та прибуття
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="row">
+
+                                <div class="col-10">
+                                    <p id="text-how-pay">
+                                        Як оплатити та отримати квитки
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button class="btn-more-information" id="btn-how-pay" data-bs-toggle="collapse"
+                                        href="#collapseHowPay">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseHowPay">
+                                <div class="collapse-style">
+                                    Як оплатити та отримати квитки
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="row">
+
+                                <div class="col-10">
+                                    <p id="text-with-pets">
+                                        Поїздка з тваринами
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button id="btn-with-pets" class="btn-more-information" data-bs-toggle="collapse"
+                                        href="#collapseWithPets">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseWithPets">
+                                <div class="collapse-style">
+                                    Поїздка з тваринами
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
                     </div>
-                    <div class="collapse" id="collapseNeededDoc">
-                        <div class="collapse-style">
-                            Умови та документи необхідні для проїзду
-                            <br />
-                            через кордон
-                        </div>
-                    </div>
-                    <hr />
                 </div>
 
-                <div class="col-4">
-                    <div class="row">
 
-                        <div class="col-10" id="text-transfer">
-                            <p>
-                                Що станеться із трансфером, якщо мій рейс
-                                <br /> затримується?
+                <div class="container">
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="row">
 
-                            </p>
+                                <div class="col-10" id="text-transfer">
+                                    <p>
+                                        Що станеться із трансфером, якщо мій рейс
+                                        <br /> затримується?
+
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button class="btn-more-information" id="btn-transfer" data-bs-toggle="collapse"
+                                        href="#collapseTransfer">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseTransfer">
+                                <div class="collapse-style">
+                                    Що станеться із трансфером, якщо мій рейс
+                                    <br /> затримується
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-2">
+                        <hr />
+                        <div class="row">
+                            <div class="row">
 
-                            <button class="btn-more-information" id="btn-transfer" data-bs-toggle="collapse"
-                                href="#collapseTransfer">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
+                                <div class="col-10" id="text-can-post">
+                                    <p>
+                                        Чи можна надіслати посилку?
+
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button class="btn-more-information" id="btn-can-post" data-bs-toggle="collapse"
+                                        href="#collapseSendParcel">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseSendParcel">
+                                <div class="collapse-style">
+                                    Чи можна надіслати посилку
+                                </div>
+                            </div>
                         </div>
+                        <hr />
+                        <div class="row">
+                            <div class="row">
+
+                                <div class="col-10">
+                                    <p id="text-leave-feedback">
+                                        Як залишити свій відгук про подорож?
+
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button class="btn-more-information" id="btn-leave-feedback"
+                                        data-bs-toggle="collapse" href="#collapseLeaveFeedback">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseLeaveFeedback">
+                                <div class="collapse-style">
+                                    Як залишити свій відгук про подорож
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr />
+
+                        <div class="row">
+                            <div class="row">
+
+                                <div class="col-10">
+                                    <p id="text-cant-find-race">
+                                        Якщо не знайшли потрібного рейсу
+
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button class="btn-more-information" id="btn-cant-find-race"
+                                        data-bs-toggle="collapse" href="#collapseCantFind">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseCantFind">
+                                <div class="collapse-style">
+                                    Якщо не знайшли потрібного рейсу
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <div class="row">
+                            <div class="row">
+
+                                <div class="col-10">
+                                    <p id="text-baggage">
+                                        Провезення багажу
+
+                                    </p>
+                                </div>
+                                <div class="col-2">
+
+                                    <button class="btn-more-information" id="btn-baggage" data-bs-toggle="collapse"
+                                        href="#collapseBaggage">
+                                        <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
+                                        <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapseBaggage">
+                                <div class="collapse-style">
+                                    Зверніть увагу, що перевізник має повне право відмовити пасажиру автобуса у
+                                    провезенні
+                                    ручної поклажі або багажу, якщо цей багаж перекриває прохід у транспорті іншим
+                                    пасажирам або
+                                    не відповідають кількості та розмірам. Інформацію про умови перевезення багажу на
+                                    конкретних
+                                    рейсах ви завжди можете уточнити у перевізника.
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
                     </div>
-                    <div class="collapse" id="collapseTransfer">
-                        <div class="collapse-style">
-                            Що станеться із трансфером, якщо мій рейс
-                            <br /> затримується
-                        </div>
-                    </div>
-                    <hr />
                 </div>
-
-
             </div>
-
-
-
-
-
-            <div class="d-flex justify-content-around">
-
-                <div class="col-4">
-                    <div class="row">
-
-                        <div class="col-10">
-                            <p id="text-can-change">
-                                Чи можна змінити дату або час рейсу
-                            </p>
-                        </div>
-                        <div class="col-2">
-
-                            <button class="btn-more-information" id="btn-can-change" data-bs-toggle="collapse"
-                                href="#collapseChangeDate">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseChangeDate">
-                        <div class="collapse-style">
-                            Чи можна змінити дату або час рейсу
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-
-                <div class="col-4">
-                    <div class="row">
-
-                        <div class="col-10" id="text-can-post">
-                            <p>
-                                Чи можна надіслати посилку?
-
-                            </p>
-                        </div>
-                        <div class="col-2">
-
-                            <button class="btn-more-information" id="btn-can-post" data-bs-toggle="collapse"
-                                href="#collapseSendParcel">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseSendParcel">
-                        <div class="collapse-style">
-                            Чи можна надіслати посилку
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-
-
-            </div>
-
-
-
-
-
-            <div class="d-flex justify-content-around">
-
-                <div class="col-4">
-                    <div class="row">
-
-                        <div class="col-10">
-                            <p id="text-time-arrive">
-                                Час відправки та прибуття
-                            </p>
-                        </div>
-                        <div class="col-2">
-
-                            <button class="btn-more-information" id="btn-time-arrive" data-bs-toggle="collapse"
-                                href="#collapseTimeArrive">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseTimeArrive">
-                        <div class="collapse-style">
-                            Час відправки та прибуття
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-
-                <div class="col-4">
-                    <div class="row">
-
-                        <div class="col-10">
-                            <p id="text-leave-feedback">
-                                Як залишити свій відгук про подорож?
-
-                            </p>
-                        </div>
-                        <div class="col-2">
-
-                            <button class="btn-more-information" id="btn-leave-feedback" data-bs-toggle="collapse"
-                                href="#collapseLeaveFeedback">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseLeaveFeedback">
-                        <div class="collapse-style">
-                            Як залишити свій відгук про подорож
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-
-
-            </div>
-
-
-
-            <div class="d-flex justify-content-around">
-
-                <div class="col-4">
-                    <div class="row">
-
-                        <div class="col-10">
-                            <p id="text-how-pay">
-                                Як оплатити та отримати квитки
-                            </p>
-                        </div>
-                        <div class="col-2">
-
-                            <button class="btn-more-information" id="btn-how-pay" data-bs-toggle="collapse"
-                                href="#collapseHowPay">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseHowPay">
-                        <div class="collapse-style">
-                            Як оплатити та отримати квитки
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-
-                <div class="col-4">
-                    <div class="row">
-
-                        <div class="col-10">
-                            <p id="text-cant-find-race">
-                                Якщо не знайшли потрібного рейсу
-
-                            </p>
-                        </div>
-                        <div class="col-2">
-
-                            <button class="btn-more-information" id="btn-cant-find-race" data-bs-toggle="collapse"
-                                href="#collapseCantFind">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseCantFind">
-                        <div class="collapse-style">
-                            Якщо не знайшли потрібного рейсу
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-
-
-            </div>
-
-
-
-
-
-            <div class="d-flex justify-content-around">
-
-                <div class="col-4">
-                    <div class="row">
-
-                        <div class="col-10">
-                            <p id="text-with-pets">
-                                Поїздка з тваринами
-                            </p>
-                        </div>
-                        <div class="col-2">
-
-                            <button id="btn-with-pets" class="btn-more-information" data-bs-toggle="collapse"
-                                href="#collapseWithPets">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseWithPets">
-                        <div class="collapse-style">
-                            Поїздка з тваринами
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-
-                <div class="col-4">
-                    <div class="row">
-
-                        <div class="col-10">
-                            <p id="text-baggage">
-                                Провезення багажу
-
-                            </p>
-                        </div>
-                        <div class="col-2">
-
-                            <button class="btn-more-information" id="btn-baggage" data-bs-toggle="collapse"
-                                href="#collapseBaggage">
-                                <img class="vertical-plus-img" src="images/vertiacal-plus.png" />
-                                <img class="horizontal-plus-img" src="images/horizontal-plus.png" />
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapse" id="collapseBaggage">
-                        <div class="collapse-style">
-                            Зверніть увагу, що перевізник має повне право відмовити пасажиру автобуса у провезенні
-                            ручної поклажі або багажу, якщо цей багаж перекриває прохід у транспорті іншим пасажирам або
-                            не відповідають кількості та розмірам. Інформацію про умови перевезення багажу на конкретних
-                            рейсах ви завжди можете уточнити у перевізника.
-                        </div>
-                    </div>
-                    <hr />
-                </div>
-
-
-            </div>
-
-
         </div>
-
-
-
     </section>
-
     <section>
         <div class="compass-group">
             <div class="container">
@@ -525,12 +510,12 @@
 
         </div>
     </section>
-
+   
     <section>
         <div class="container reviews">
             <div class="row">
                 <div class="d-flex justify-content-around">
-                    <div class="col-4">
+                    <div class="col-4" id="leaveFeedbackBlock">
                         <h2>
                             Що говорять<br /> про нас<br /> клієнти?
                         </h2>
@@ -549,93 +534,44 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="feedback-rectangle">
-                            <div class="feedback-content">
-                                <h2 class="feedback-owner">
-                                    Тетяна
-                                </h2>
-                                <h4 class="owner-from-to">
-                                    Харків - Берлін
-                                </h4>
-                                <h3 class="datetime-feedback">
-                                    10 лютого, 2022
-                                </h3>
-
-                                <hr />
-
-                                <p class="feedback-text">
-                                 </p>
-                                <img class="feedback-img" src="images/feedback-img.png" alt="feedback" />
-                                <div class="row star-container">
-                                    <div class="col">
-                                        <img src="images/filled-star.png" alt="star" />
-                                        <img src="images/filled-star.png" alt="star" />
-                                        <img src="images/filled-star.png" alt="star" />
-                                        <img src="images/filled-star.png" alt="star" />
-                                        <img src="images/filled-star.png" alt="star" />
-
-                                    </div>
+                    <div class="swiper mySwiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper" id="reviewContainer">
+                            <div class="swiper-slide">
+                                <div class="row" id="firstFeedbackSlide">
 
                                 </div>
-
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="feedback-rectangle">
-                            <div class="feedback-content">
-                                <h2 class="feedback-owner">
-                                    Тетяна
-                                </h2>
-                                <h4 class="owner-from-to">
-                                    Харків - Берлін
-                                </h4>
-                                <h3 class="datetime-feedback">
-                                    10 лютого, 2022
-                                </h3>
-
-                                <hr />
-
-                                <p class="feedback-text">
-                                    Дякую Вам велике, поїздка пройшла комфортно. Водій акуратно, чемно та професійно
-                                    керував
-                                    автобусом. Дякую йому! Я Вас рекомендуватиму, однозначно.)
-                                </p>
-                                <img class="feedback-img" src="images/feedback-img.png" alt="feedback" />
-                                <div class="row star-container">
-                                    <div class="col">
-                                        <img src="images/filled-star.png" alt="star" />
-                                        <img src="images/filled-star.png" alt="star" />
-                                        <img src="images/filled-star.png" alt="star" />
-                                        <img src="images/filled-star.png" alt="star" />
-                                        <img src="images/filled-star.png" alt="star" />
-
-                                    </div>
+                            <div class="swiper-slide">
+                                <div class="row" id="secondFeedbackSlide">
 
                                 </div>
-
                             </div>
+                            <div class="swiper-slide">
+                                <div class="row" id="thirdFeedbackSlide">
+
+                                </div>
+                            </div>
+
+
+
                         </div>
+
+                        <div class="swiper-pagination " id="swiper-pagination"></div>
                     </div>
                 </div>
+
+
+
+
             </div>
 
 
         </div>
-        <div class="row carousel-container-feedback">
-            <div class=" carousel-feedback-circle filled-circle">
 
-            </div>
-            <div class=" carousel-feedback-circle">
-
-            </div>
-            <div class=" carousel-feedback-circle">
-
-            </div>
-        </div>
     </section>
     <section>
+
         <img id="footer-img" src="images/footer-image.png" alt="footer-img" />
     </section>
     <footer>
@@ -757,9 +693,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <!-- <script src="dist/bundle.js"></script> -->
-    
-    <script  src="scripts/index.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper('.mySwiper', {
+
+            direction: 'horizontal',
+            loop: true,
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    <script src="dist/bundle.js"></script>
+
 
 </body>
 

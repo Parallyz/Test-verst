@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a:hover, a:visited, a:link {
   color: white;
   background-color: transparent;
@@ -71,11 +72,6 @@ header img {
   margin-top: 100px;
   background-color: #FFFFFF;
   border-radius: 10px;
-  padding-top: 40px;
-}
-.flight-search select {
-  height: 50px;
-  margin-left: 50px;
 }
 .flight-search .painted-btn {
   background-color: #006A66;
@@ -84,11 +80,11 @@ header img {
   height: 50px;
   border-radius: 5px;
   padding: 12px;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 .flight-search .rows-img {
-  padding-left: 8%;
-  padding-top: 10px;
+  padding-left: 6%;
+  margin-top: 10px;
 }
 .flight-search p {
   color: #C7C7C7;
@@ -99,8 +95,83 @@ header img {
   margin-left: 50px;
   margin-top: 10px;
 }
+.flight-search label {
+  position: absolute;
+  color: black;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  background: white;
+}
 .flight-search span {
   color: #006A66;
+}
+
+select {
+  padding-left: 35px;
+  padding-right: 35px;
+  height: 50px;
+  min-width: 270px;
+  margin-left: 15%;
+  border: 1px solid #C7C7C7;
+  border-radius: 5px;
+  -webkit-appearance: none;
+}
+select .select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 6px;
+  right: 10px;
+  position: absolute;
+}
+select:focus {
+  outline: 0px;
+}
+
+.padding-to-select {
+  position: relative;
+  padding-top: 40px;
+}
+
+.label-to-select-from {
+  left: 80px;
+  top: 33px;
+}
+
+.label-to-select-to {
+  left: 80px;
+  top: 33px;
+}
+
+.label-to-select-date {
+  left: 80px;
+  top: 33px;
+}
+
+#datetime {
+  height: 50px;
+  width: 200px;
+  border: 1px solid #C7C7C7;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 35px;
+  margin-left: 15%;
+}
+#datetime:focus {
+  outline: 0px;
+}
+
+.img-pos {
+  position: absolute;
+  left: 75px;
+  top: 58px;
+}
+
+.arrow-pos {
+  position: absolute;
+  right: 6px;
+  top: 63px;
 }
 
 .popular-section {
@@ -205,8 +276,8 @@ header img {
 
 hr {
   height: 0px;
-  left: 425px;
   top: 1746.1px;
+  margin-top: 10px;
   border: 1px solid #E5E5E5;
 }
 
@@ -219,6 +290,7 @@ hr {
 
 .reviews {
   margin-top: 60px;
+  position: relative;
 }
 .reviews h2 {
   font-size: 35px;
@@ -258,6 +330,8 @@ hr {
   height: 370px;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+  position: relative;
+  margin-left: 15px;
 }
 .feedback-rectangle .feedback-content {
   padding: 50px;
@@ -299,6 +373,8 @@ hr {
 }
 .feedback-rectangle .feedback-img {
   position: absolute;
+  right: 50px;
+  bottom: 35px;
 }
 
 .btn-margin {
@@ -307,11 +383,9 @@ hr {
 
 .star-container {
   margin-top: 40px;
-}
-
-.carousel-container-feedback {
-  margin-left: 62%;
-  margin-top: 30px;
+  position: absolute;
+  left: 50px;
+  bottom: 30px;
 }
 
 .carousel-feedback-circle {
@@ -325,6 +399,21 @@ hr {
 
 .filled-circle {
   background-color: #006A66;
+}
+
+.carousel-container-feedback {
+  padding-top: 30px;
+}
+
+.swiper {
+  padding: 10px;
+  width: 800px;
+  height: 450px;
+  --swiper-pagination-color:#006A66;
+}
+
+.swiper-pagination {
+  color: black;
 }
 
 footer {
@@ -424,6 +513,7 @@ footer {
 .compass-group {
   height: 416px;
   background-color: #006A66;
+  margin-top: 50px;
 }
 .compass-group .we-are-glad {
   padding-top: 150px;

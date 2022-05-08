@@ -67,10 +67,7 @@ a:hover
     margin-top: 100px
     background-color: $logo-color
     border-radius: 10px
-    padding-top: 40px
-    select
-        height: 50px
-        margin-left: 50px
+
     .painted-btn
         background-color: $main-color
         color: $text-color
@@ -78,10 +75,10 @@ a:hover
         height: 50px
         border-radius: 5px
         padding: 12px
-        margin-left: 20%
+        margin-left: 10%
     .rows-img
-        padding-left: 8%
-        padding-top: 10px
+        padding-left: 6%
+        margin-top: 10px
     p
         color: $example-color
         font-style: normal
@@ -90,6 +87,71 @@ a:hover
         line-height: 16px
         margin-left: 50px
         margin-top: 10px
+    label
+        position: absolute
+        color: black
+        font-style: normal
+        font-weight: 300
+        font-size: 12px
+        line-height: 14px
+        background: white
+
+      
 
     span
         color: $main-color
+select
+    padding-left: 35px
+    padding-right: 35px
+    height: 50px
+    min-width: 270px
+    margin-left: 15%
+    border: 1px solid $example-color
+    border-radius: 5px
+    -webkit-appearance: none
+    .select-wrapper::after
+        content: "▼"
+        font-size: 1rem
+        top: 6px
+        right: 10px
+        position: absolute
+
+    &:focus
+        outline: 0px
+
+.padding-to-select
+    position: relative
+    padding-top: 40px
+
+.label-to-select-from
+
+    left: 80px
+    top: 33px
+
+.label-to-select-to
+    left: 80px
+    top: 33px
+
+.label-to-select-date
+    left: 80px
+    top: 33px
+
+#datetime
+    height: 50px
+    width: 200px
+    border: 1px solid $example-color
+    border-radius: 5px
+    padding: 10px
+    padding-left: 35px
+    margin-left: 15%
+    &:focus
+        outline: 0px
+
+.img-pos
+    position: absolute
+    left: 75px
+    top: 58px
+.arrow-pos
+    position: absolute
+    right: 6px
+    top: 63px

@@ -1,3 +1,5 @@
 import "../css/style.css"
-import "../scripts/index"
+import "../css/datepickerStyle.css"
+import "../scripts/index.js"
+
 

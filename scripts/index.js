@@ -1,7 +1,10 @@
-
+import images from '../modules/imagesPath.js';
+import feedbacks from '../modules/feedBack.js';
+import popularTrips from '../modules/popularTrips.js';
 
 const firstRowPopularOfferContainer = document.querySelector("#firstrow-popular-section");
 const secondRowPopularOfferContainer = document.querySelector("#second-popular-section");
+
 
 const btnDocumentNeed = document.querySelector("#btn-document-need");
 const textDocumentNeed = document.querySelector("#text-document-need");
@@ -200,79 +203,61 @@ btnCantFindRace.addEventListener('click', (event) => {
 
 })
 
+// let counterCarousel = 0;
+// const containerCarouselCirlce = document.querySelector("#carouselContainerFeedbackCircle");
+// const interval = setInterval(() => {
+//     if (counterCarousel == 3) counterCarousel = 0;
+//     for (let i = 0; i < 3; i++) {
+//         containerCarouselCirlce.children[i].classList.remove("filled-circle");
+//     }
+//     containerCarouselCirlce.children[counterCarousel++].classList.add("filled-circle");
 
 
-const interval = setInterval(() => {
-    //clearInterval(interval);
-    //btndocument.children[0].style.display = 'block'
-}, 5000);
-
-
-const images = {
-    hamburg_kharkiv: "../images/hamburg-kharkiv.png",
-    kharkiv_venezia: "../images/kharkiv-venezia.png",
-    krakow_odessa: "../images/krakow-odessa.png",
-    kyiv_berlin: "../images/kyiv-berlin.png",
-    lviv_warsaw: "../images/lviv-warsaw.png",
-    prague_chernihiv: "../images/prague-chernihiv.png",
-    rivne_lublin: "../images/rivne-lublin.png",
-    wroclaw_lutsk: "../images/wroclaw-lutsk.png",
-    star: "../images/filled-star.png",
-    feedback: "../images/feedback-img.png"
-}
-class PopularTrip {
-    constructor(fromTo, cost, image) {
-        this.FromTo = fromTo;
-        this.Cost = cost;
-        this.Image = image;
-    }
-}
-
-
-class Feedback {
-    constructor(id, name, fromTo, date, text, stars) {
-        this.id = id
-        this.FromTo = fromTo;
-        this.Name = name;
-        this.Date = date;
-        this.Text = text;
-        this.Stars = stars;
-
-    }
-}
-
-const feedbacks = [
-    new Feedback(0, "Тетяна", "Харків - Берлін", "10 лютого, 2022",
-        "Дякую Вам велике, поїздка пройшла комфортно. Водій акуратно, чемно та професійно керував автобусом. Дякую йому! Я Вас рекомендуватиму, однозначно.)", 5),
-    new Feedback(1, "Андрій", "Варшава - Рівне", "12 грудня, 2021 ",
-        "Блестящий сервис. Приветливый водитель. Хороший автобус с кондиционером. Автобус был вовремя. Цена очень хорошая.", 5),
-    new Feedback(2, "Володимир", "Харків - Берлін", "10 лютого, 2022",
-        "Непогано", 4),
-    new Feedback(3, "Владислав", "Варшава - Рівне", "12 грудня, 2021 ",
-        "Непогано", 4),
-    new Feedback(4, "Микола", "Варшава - Рівне", "18 лютого, 2022",
-        "Погано", 3),
-    new Feedback(5, "Петро", "Харків - Берлін", "10 лютого, 2022",
-        "Жахливо", 2)
-
-]
-
-const popularTrips = [
-    new PopularTrip("Київ - Берлін", 2000, images.kyiv_berlin),
-    new PopularTrip("Львів - Варшава", 1000, images.lviv_warsaw),
-    new PopularTrip("Харків - Венеція", 2500, images.kharkiv_venezia),
-    new PopularTrip("Рівне - Люблін", 1750, images.rivne_lublin),
-    new PopularTrip("Гамбург - Харків", 2900, images.hamburg_kharkiv),
-    new PopularTrip("Вроцлав - Луцьк", 1320, images.wroclaw_lutsk),
-    new PopularTrip("Прага - Чернігів", 2100, images.kyiv_berlin),
-    new PopularTrip("Краків - Одеса", 3730, images.krakow_odessa),
-]
+// }, 1000);
 
 
 
+
+
+
+const firstFeedbackSlide = document.querySelector("#firstFeedbackSlide");
+const secondFeedbackSlide = document.querySelector("#secondFeedbackSlide");
+const thirdFeedbackSlide = document.querySelector("#thirdFeedbackSlide");
 
 const InitFeedbacks = () => {
-    feedbacks
+    for (let index = 0; index < feedbacks.length; index++) {
+        const element = feedbacks[index];
+        switch (index) {
+
+            case 0: {
+                createFeedbackCard(feedbacks[index], firstFeedbackSlide);
+            }
+                break;
+            case 1: {
+                createFeedbackCard(feedbacks[index], firstFeedbackSlide);
+            }
+                break;
+            case 2: {
+                createFeedbackCard(feedbacks[index], secondFeedbackSlide);
+            }
+                break;
+            case 3: {
+                createFeedbackCard(feedbacks[index], secondFeedbackSlide);
+            }
+                break;
+            case 4: {
+                createFeedbackCard(feedbacks[index], thirdFeedbackSlide);
+            }
+                break;
+            case 5: {
+                createFeedbackCard(feedbacks[index], thirdFeedbackSlide);
+            }
+                break;
+        }
+
+    }
+
+
 }
 
 
@@ -290,6 +275,7 @@ const InitPopular = () => {
 }
 
 const createPopularCard = (trip, row) => {
+
     let divColumn = document.createElement("div");
     divColumn.classList.add("col-3");
 
@@ -325,9 +311,13 @@ const createPopularCard = (trip, row) => {
 
 }
 
-const createFeedbackCard = (feedback,container) => {
+const createFeedbackCard = (feedback, container) => {
+
     let divColumn = document.createElement("div");
-    divColumn.classList.add("col-3");
+    divColumn.classList.add("col-6");
+
+    let divSlide = document.createElement("div");
+    divSlide.classList.add("wiper-slide");
 
     let divFeedbackRect = document.createElement("div");
     divFeedbackRect.classList.add("feedback-rectangle");
@@ -345,7 +335,7 @@ const createFeedbackCard = (feedback,container) => {
 
     let h3FeedbackDate = document.createElement("h3");
     h3FeedbackDate.classList.add("datetime-feedback");
-    h3FeedbackDate.innerText = feedback.FromTo;
+    h3FeedbackDate.innerText = feedback.Date;
 
     let hr = document.createElement("hr");
 
@@ -386,10 +376,28 @@ const createFeedbackCard = (feedback,container) => {
     divFeedbackContent.appendChild(divStarContainer);
 
     divFeedbackRect.appendChild(divFeedbackContent);
-
+    // divSlide.appendChild(divFeedbackRect);
     divColumn.appendChild(divFeedbackRect);
 
     container.appendChild(divColumn);
+    //  container.parentNode.insertBefore(divColumn,leaveFeedbackBlock.nextSibling)
 }
 
+let datetime = document.querySelector("#datetime");
+
+datetime.addEventListener('focus', (event) => {
+    datetime.type = 'date';
+    try {
+        datetime.showPicker();
+    } catch (error) {
+        
+    }
+
+
+});
+
+
+
+
 InitPopular();
+InitFeedbacks();
