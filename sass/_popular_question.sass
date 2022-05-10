@@ -27,22 +27,31 @@
         padding: 0
         position: absolute
 
-    .horizontal-plus-img
-        padding-top: 6px
-    .vertical-plus-img
-        display: block
-        padding-left: 6px
-
 hr
 
     height: 0px
-   
+
     top: 1746.1px
     margin-top: 10px
     border: 1px solid #E5E5E5
-.collapse-style
+
+.collapse__content
 
     font-style: normal
     font-weight: 300
     font-size: 16px
     line-height: 19px
+    max-height: 0
+    overflow: hidden
+    transition: 0.3s ease-in-out
+.accordion
+
+    &:hover
+        cursor: pointer
+        p
+            opacity: 0.7
+
+.accordion__image_margin
+
+    margin-top: auto
+    margin-bottom: auto
