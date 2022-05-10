@@ -24,13 +24,12 @@ header
     ul
         list-style-type: none
         overflow: hidden
-        padding-top: 28px
-        margin: 0 0 0 60%
+
     li
-        margin-right: 7%
         float: left
-    img
-        margin-right: 12px
+
+.img_margin_right
+    margin-right: 12px
 
 .header-navigation
     text-decoration: none
@@ -49,9 +48,9 @@ header
     font-weight: 700
     font-size: 24px
     line-height: 28px
-    margin-left: 25%
-    margin-top: 28px
-    position: absolute
+
+.header_margin
+    padding-top: 28px
 
 a:link
     @extend %a-style
@@ -75,17 +74,17 @@ a:hover
         height: 50px
         border-radius: 5px
         padding: 12px
-        margin-left: 10%
+
     .rows-img
-        padding-left: 6%
         margin-top: 10px
+        margin-right: 0px !important
     p
         color: $example-color
         font-style: normal
         font-weight: 300
         font-size: 14px
         line-height: 16px
-        margin-left: 50px
+
         margin-top: 10px
     label
         position: absolute
@@ -95,46 +94,24 @@ a:hover
         font-size: 12px
         line-height: 14px
         background: white
-
-      
-
+        left: 12px
+        top: 33px
     span
         color: $main-color
 select
     padding-left: 35px
     padding-right: 35px
     height: 50px
-    min-width: 270px
-    margin-left: 15%
+    width: 268px
+
     border: 1px solid $example-color
     border-radius: 5px
-    -webkit-appearance: none
-    .select-wrapper::after
-        content: "▼"
-        font-size: 1rem
-        top: 6px
-        right: 10px
-        position: absolute
-
-    &:focus
-        outline: 0px
+ 
+  
 
 .padding-to-select
     position: relative
     padding-top: 40px
-
-.label-to-select-from
-
-    left: 80px
-    top: 33px
-
-.label-to-select-to
-    left: 80px
-    top: 33px
-
-.label-to-select-date
-    left: 80px
-    top: 33px
 
 #datetime
     height: 50px
@@ -143,15 +120,15 @@ select
     border-radius: 5px
     padding: 10px
     padding-left: 35px
-    margin-left: 15%
+
     &:focus
         outline: 0px
 
 .img-pos
     position: absolute
-    left: 75px
+    left: 18px
     top: 58px
 .arrow-pos
     position: absolute
-    right: 6px
+    right: 10px
     top: 63px

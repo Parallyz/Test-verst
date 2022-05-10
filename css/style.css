@@ -1,4 +1,3 @@
-@charset "UTF-8";
 a:hover, a:visited, a:link {
   color: white;
   background-color: transparent;
@@ -33,14 +32,12 @@ header h3 {
 header ul {
   list-style-type: none;
   overflow: hidden;
-  padding-top: 28px;
-  margin: 0 0 0 60%;
 }
 header li {
-  margin-right: 7%;
   float: left;
 }
-header img {
+
+.img_margin_right {
   margin-right: 12px;
 }
 
@@ -62,9 +59,10 @@ header img {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  margin-left: 25%;
-  margin-top: 28px;
-  position: absolute;
+}
+
+.header_margin {
+  padding-top: 28px;
 }
 
 .flight-search {
@@ -80,11 +78,10 @@ header img {
   height: 50px;
   border-radius: 5px;
   padding: 12px;
-  margin-left: 10%;
 }
 .flight-search .rows-img {
-  padding-left: 6%;
   margin-top: 10px;
+  margin-right: 0px !important;
 }
 .flight-search p {
   color: #C7C7C7;
@@ -92,7 +89,6 @@ header img {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  margin-left: 50px;
   margin-top: 10px;
 }
 .flight-search label {
@@ -103,6 +99,8 @@ header img {
   font-size: 12px;
   line-height: 14px;
   background: white;
+  left: 12px;
+  top: 33px;
 }
 .flight-search span {
   color: #006A66;
@@ -112,41 +110,14 @@ select {
   padding-left: 35px;
   padding-right: 35px;
   height: 50px;
-  min-width: 270px;
-  margin-left: 15%;
+  width: 268px;
   border: 1px solid #C7C7C7;
   border-radius: 5px;
-  -webkit-appearance: none;
-}
-select .select-wrapper::after {
-  content: "▼";
-  font-size: 1rem;
-  top: 6px;
-  right: 10px;
-  position: absolute;
-}
-select:focus {
-  outline: 0px;
 }
 
 .padding-to-select {
   position: relative;
   padding-top: 40px;
-}
-
-.label-to-select-from {
-  left: 80px;
-  top: 33px;
-}
-
-.label-to-select-to {
-  left: 80px;
-  top: 33px;
-}
-
-.label-to-select-date {
-  left: 80px;
-  top: 33px;
 }
 
 #datetime {
@@ -156,7 +127,6 @@ select:focus {
   border-radius: 5px;
   padding: 10px;
   padding-left: 35px;
-  margin-left: 15%;
 }
 #datetime:focus {
   outline: 0px;
@@ -164,13 +134,13 @@ select:focus {
 
 .img-pos {
   position: absolute;
-  left: 75px;
+  left: 18px;
   top: 58px;
 }
 
 .arrow-pos {
   position: absolute;
-  right: 6px;
+  right: 10px;
   top: 63px;
 }
 
@@ -469,6 +439,12 @@ footer ul li {
   padding-bottom: 3px;
 }
 
+.container_background {
+  background-color: #006A66;
+  height: 293px;
+  position: relative;
+}
+
 .contacts img {
   margin-top: 10px;
 }
@@ -478,7 +454,9 @@ footer ul li {
 
 #footer-img {
   width: 100%;
-  padding-top: 50px;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 body {
@@ -487,9 +465,9 @@ body {
   overflow-x: hidden;
 }
 
-footer {
-  background-color: #006A66;
-  height: 293px;
+a:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 .benefits {

@@ -1,7 +1,7 @@
 import images from '../modules/imagesPath.js';
 import feedbacks from '../modules/feedBack.js';
 import popularTrips from '../modules/popularTrips.js';
-
+import './select.js';
 const firstRowPopularOfferContainer = document.querySelector("#firstrow-popular-section");
 const secondRowPopularOfferContainer = document.querySelector("#second-popular-section");
 
@@ -311,6 +311,7 @@ const createPopularCard = (trip, row) => {
 
 }
 
+
 const createFeedbackCard = (feedback, container) => {
 
     let divColumn = document.createElement("div");
@@ -390,12 +391,11 @@ datetime.addEventListener('focus', (event) => {
     try {
         datetime.showPicker();
     } catch (error) {
-        
+
     }
 
 
 });
-
 
 
 
