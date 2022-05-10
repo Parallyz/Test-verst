@@ -116,6 +116,7 @@
                             Дата поїздки
                         </label>
                         <img class="img-pos" src="./images/date.png" />
+                        <img class="arrow-pos" src="./images/select-arrow.png" />
 
                         <input id="datetime" type="text" placeholder="Всі дні.." />
 
@@ -445,14 +446,16 @@
                             тому будь-які побажання та пропозиції від <br />клієнтів вітаються! Нам важлива ваша
                             <br />думка.
                         </p>
-                        <div class="btn-margin">
+                        <div class="btn-margin d-flex justify-content-start">
 
-                            <button class="feedback-btn">
+                            <button class="feedback-btn btn ">
                                 Залишити відгук
                             </button>
-                            <button class="all-feedback-btn">
-                                Всі відгуки
-                            </button>
+                            <div class="all-feedback-btn  ">
+
+                                <a href="#" class="btn"> Всі відгуки </a>
+
+                            </div>
                         </div>
                     </div>
                     <div class="swiper mySwiper">
@@ -460,17 +463,205 @@
                         <div class="swiper-wrapper" id="reviewContainer">
                             <div class="swiper-slide">
                                 <div class="row" id="firstFeedbackSlide">
+                                    <div class="col-6">
 
+                                        <div class="feedback-rectangle">
+                                            <div class="feedback-content">
+                                                <h2 class="feedback-owner">
+                                                    Тетяна
+                                                </h2>
+                                                <h4 class="owner-from-to">
+                                                    Харків - Берлін
+                                                </h4>
+                                                <h3 class="datetime-feedback">
+                                                    10 лютого, 2022
+                                                </h3>
+                                                <hr />
+                                                <p class="feedback-text">
+                                                    Дякую Вам велике, поїздка пройшла комфортно. Водій акуратно,
+                                                    чемно та професійно керував автобусом. Дякую йому! Я Вас
+                                                    рекомендуватиму, однозначно.)
+                                                </p>
+                                                <img class="feedback-img" src="images/feedback-img.png" />
+                                                <div class="row star-container">
+                                                    <div class="col">
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6">
+
+                                        <div class="feedback-rectangle">
+                                            <div class="feedback-content">
+                                                <h2 class="feedback-owner">
+                                                    Андрій
+                                                </h2>
+                                                <h4 class="owner-from-to">
+                                                    Варшава - Рівне
+                                                </h4>
+                                                <h3 class="datetime-feedback">
+                                                    12 грудня, 2021
+                                                </h3>
+                                                <hr />
+                                                <p class="feedback-text">
+                                                    Блестящий сервис. Приветливый водитель. Хороший автобус с
+                                                    кондиционером. Автобус был вовремя. Цена очень хорошая. </p>
+                                                <img class="feedback-img" src="images/feedback-img.png" />
+                                                <div class="row star-container">
+                                                    <div class="col">
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="row" id="secondFeedbackSlide">
+                                    <div class="col-6">
 
+                                        <div class="feedback-rectangle">
+                                            <div class="feedback-content">
+                                                <h2 class="feedback-owner">
+                                                    Тетяна
+                                                </h2>
+                                                <h4 class="owner-from-to">
+                                                    Харків - Берлін
+                                                </h4>
+                                                <h3 class="datetime-feedback">
+                                                    10 лютого, 2022
+                                                </h3>
+                                                <hr />
+                                                <p class="feedback-text">
+                                                    Дякую Вам велике, поїздка пройшла комфортно. Водій акуратно,
+                                                    чемно та професійно керував автобусом. Дякую йому! Я Вас
+                                                    рекомендуватиму, однозначно.)
+                                                </p>
+                                                <img class="feedback-img" src="images/feedback-img.png" />
+                                                <div class="row star-container">
+                                                    <div class="col">
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6">
+
+                                        <div class="feedback-rectangle">
+                                            <div class="feedback-content">
+                                                <h2 class="feedback-owner">
+                                                    Андрій
+                                                </h2>
+                                                <h4 class="owner-from-to">
+                                                    Варшава - Рівне
+                                                </h4>
+                                                <h3 class="datetime-feedback">
+                                                    12 грудня, 2021
+                                                </h3>
+                                                <hr />
+                                                <p class="feedback-text">
+                                                    Добре
+                                                </p>
+                                                <img class="feedback-img" src="images/feedback-img.png" />
+                                                <div class="row star-container">
+                                                    <div class="col">
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="row" id="thirdFeedbackSlide">
+                                    <div class="col-6">
 
+                                        <div class="feedback-rectangle">
+                                            <div class="feedback-content">
+                                                <h2 class="feedback-owner">
+                                                    Тетяна
+                                                </h2>
+                                                <h4 class="owner-from-to">
+                                                    Харків - Берлін
+                                                </h4>
+                                                <h3 class="datetime-feedback">
+                                                    10 лютого, 2022
+                                                </h3>
+                                                <hr />
+                                                <p class="feedback-text">
+                                                    Дякую Вам велике, поїздка пройшла комфортно. Водій акуратно,
+                                                    чемно та професійно керував автобусом. Дякую йому! Я Вас
+                                                    рекомендуватиму, однозначно.)
+                                                </p>
+                                                <img class="feedback-img" src="images/feedback-img.png" />
+                                                <div class="row star-container">
+                                                    <div class="col">
+                                                        <img src="images/filled-star.png" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-6">
+
+                                        <div class="feedback-rectangle">
+                                            <div class="feedback-content">
+                                                <h2 class="feedback-owner">
+                                                    Андрій
+                                                </h2>
+                                                <h4 class="owner-from-to">
+                                                    Варшава - Рівне
+                                                </h4>
+                                                <h3 class="datetime-feedback">
+                                                    12 грудня, 2021
+                                                </h3>
+                                                <hr />
+                                                <p class="feedback-text">
+                                                    Блестящий сервис. Приветливый водитель. Хороший автобус с
+                                                    кондиционером. Автобус был вовремя. Цена очень хорошая. </p>
+                                                <img class="feedback-img" src="images/feedback-img.png" />
+                                                <div class="row star-container">
+                                                    <div class="col">
+                                                        <img src="images/filled-star.png" />
+                                                        <img src="images/filled-star.png" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
 

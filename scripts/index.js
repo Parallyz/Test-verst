@@ -11,15 +11,9 @@ const firstFeedbackSlide = document.querySelector("#firstFeedbackSlide");
 const secondFeedbackSlide = document.querySelector("#secondFeedbackSlide");
 const thirdFeedbackSlide = document.querySelector("#thirdFeedbackSlide");
 
-
-
-
-
-
-
 const InitFeedbacks = () => {
     for (let index = 0; index < feedbacks.length; index++) {
-        const element = feedbacks[index];
+        
         switch (index) {
 
             case 0: {
@@ -47,13 +41,11 @@ const InitFeedbacks = () => {
             }
                 break;
         }
-
+        console.log(feedbacks);
     }
 
 
 }
-
-
 
 const InitPopular = () => {
     for (let i = 0; i < popularTrips.length; i++) {
@@ -111,7 +103,7 @@ const createFeedbackCard = (feedback, container) => {
     divColumn.classList.add("col-6");
 
     let divSlide = document.createElement("div");
-    divSlide.classList.add("wiper-slide");
+    divSlide.classList.add("swiper-slide");
 
     let divFeedbackRect = document.createElement("div");
     divFeedbackRect.classList.add("feedback-rectangle");
@@ -170,11 +162,9 @@ const createFeedbackCard = (feedback, container) => {
     divFeedbackContent.appendChild(divStarContainer);
 
     divFeedbackRect.appendChild(divFeedbackContent);
-    // divSlide.appendChild(divFeedbackRect);
     divColumn.appendChild(divFeedbackRect);
 
     container.appendChild(divColumn);
-    //  container.parentNode.insertBefore(divColumn,leaveFeedbackBlock.nextSibling)
 }
 
 let datetime = document.querySelector("#datetime");
@@ -193,4 +183,4 @@ datetime.addEventListener('focus', (event) => {
 
 
 InitPopular();
-InitFeedbacks();
+//InitFeedbacks();

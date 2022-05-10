@@ -281,7 +281,7 @@ hr {
   padding-top: 30px;
   color: #393939;
 }
-.reviews button {
+.reviews .btn {
   padding: 10px 20px 10px 20px;
   font-family: "Roboto";
   font-style: normal;
@@ -295,12 +295,18 @@ hr {
   background-color: #006A66;
   color: white;
   border: 0;
+  width: 170px;
+}
+.feedback-btn:hover {
+  color: White;
 }
 
-.all-feedback-btn {
+.all-feedback-btn a {
+  width: 120px;
   background-color: white;
   color: #006A66;
   border: 1px solid #006A66;
+  margin-left: 10px;
 }
 
 .feedback-rectangle {
@@ -387,7 +393,7 @@ hr {
   padding: 10px;
   width: 800px;
   height: 450px;
-  --swiper-pagination-color:#006A66;
+  --swiper-pagination-color: #006A66;
 }
 
 .swiper-pagination {
