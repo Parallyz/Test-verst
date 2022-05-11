@@ -43,7 +43,7 @@ header li {
 
 .header-navigation {
   text-decoration: none;
-  margin: auto;
+  margin-left: 50px;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
