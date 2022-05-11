@@ -111,8 +111,6 @@ select {
   padding-right: 35px;
   height: 50px;
   width: 268px;
-  border: 1px solid #C7C7C7;
-  border-radius: 5px;
 }
 
 .padding-to-select {
@@ -307,6 +305,9 @@ hr {
   color: #006A66;
   border: 1px solid #006A66;
   margin-left: 10px;
+}
+.all-feedback-btn a:hover {
+  opacity: 1;
 }
 
 .feedback-rectangle {
