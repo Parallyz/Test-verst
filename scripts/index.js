@@ -4,8 +4,7 @@ import popularTrips from '../modules/popularTrips.js';
 import './select.js';
 import './accordion.js';
 
-const firstRowPopularOfferContainer = document.querySelector("#firstrow-popular-section");
-const secondRowPopularOfferContainer = document.querySelector("#second-popular-section");
+const PopularOfferContainer = document.querySelector("#popular-section");
 
 const firstFeedbackSlide = document.querySelector("#firstFeedbackSlide");
 const secondFeedbackSlide = document.querySelector("#secondFeedbackSlide");
@@ -13,7 +12,7 @@ const thirdFeedbackSlide = document.querySelector("#thirdFeedbackSlide");
 
 const InitFeedbacks = () => {
     for (let index = 0; index < feedbacks.length; index++) {
-        
+
         switch (index) {
 
             case 0: {
@@ -49,13 +48,9 @@ const InitFeedbacks = () => {
 
 const InitPopular = () => {
     for (let i = 0; i < popularTrips.length; i++) {
-        if (i < 4) {
-            createPopularCard(popularTrips[i], firstRowPopularOfferContainer);
-        }
-        else {
-            createPopularCard(popularTrips[i], secondRowPopularOfferContainer);
 
-        }
+        createPopularCard(popularTrips[i], PopularOfferContainer);
+
     }
 }
 
@@ -180,7 +175,17 @@ datetime.addEventListener('focus', (event) => {
 
 });
 
+let burger__img = document.querySelector(".burger__img").addEventListener('click', () => {
+    let burger__menu = document.querySelector(".header__menu");
+    if (burger__menu.style.display == "none") {
 
+        burger__menu.style.display = "block";
+   
+    }
+    else {
+        burger__menu.style.display = "none";
+    }
+});
 
-InitPopular();
+//InitPopular();
 //InitFeedbacks();

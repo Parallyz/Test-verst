@@ -11,7 +11,7 @@
         padding-top: 30px
         color: #393939
     .btn
-        padding: 10px 20px 10px 20px
+        height: 40px
         font-family: $main-font-family
         font-style: normal
         font-weight: 400
@@ -28,23 +28,33 @@
         color: White
 .all-feedback-btn
     a
+        display: block
         width: 120px
         background-color: $text-color
         color: $main-color
         border: 1px solid $main-color
         margin-left: 10px
+        font-size: 16px
         &:hover
             opacity: 1
+            color: $main-color
+        &:visited
+            color: $main-color
+        &:link
+            color: $main-color
+
+a:visited
 
 .feedback-rectangle
     width: 340px
-    height: 370px
+    min-height: 370px
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05)
     border-radius: 10px
     position: relative
-    margin-left: 15px
+    height: auto
     .feedback-content
         padding: 50px
+
     .feedback-owner
         font-family: $main-font-family
         font-style: normal
@@ -106,9 +116,8 @@
 
 .swiper
     padding: 10px
-    width: 800px
-    height: 450px
+    padding-left: 20px
+    width: 780px
+    min-height: 450px
+    height: auto
     --swiper-pagination-color: #006A66
-
-.swiper-pagination
-    color: black

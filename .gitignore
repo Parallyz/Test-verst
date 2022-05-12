@@ -1,16 +1,5 @@
 
-/node_modules/*
-!/node_modules/select2
-/node_modules/select2/*
-!/node_modules/select2/dist
-/node_modules/select2/dist/*
-!/node_modules/select2/dist/js
-!/node_modules/select2/dist/css
-/node_modules/select2/dist/js/*
-!/node_modules/select2/dist/js/select2.min.js
-
-
-
+/node_modules/
 /test/js
 /test/browsertest/js
 /test/fixtures/temp-*

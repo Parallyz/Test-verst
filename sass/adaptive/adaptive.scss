@@ -1,0 +1,412 @@
+@media only screen and(max-width:1400px) {
+    .all-feedback-btn a {
+        padding-top: 15px;
+        height: 58px;
+    }
+
+    .datetime_arrow {
+        right: 80px;
+    }
+
+    .reviews .btn {
+        height: 50px;
+    }
+}
+
+@media only screen and(max-width:1200px) {
+    .popular-card {
+        width: 210px;
+    }
+
+    .popular-text-rectangle {
+        margin-left: 120px;
+    }
+
+    .feedback-rectangle {
+        height: 400px;
+        width: 300px;
+        padding: 20px;
+        margin-left: 20px;
+
+    }
+
+    .arrow-pos {
+        left: 180px;
+    }
+
+    .header {
+
+        select {
+            width: 200px;
+        }
+    }
+
+    .feedback-rectangle .feedback-content {
+        padding: 20px;
+
+
+    }
+
+    .compass-group #map-img {
+        width: 400px;
+    }
+
+    footer {
+        .contacts ul li:first-child {
+            height: 70px;
+        }
+    }
+}
+
+
+@media only screen and(max-width:992px) {
+
+    .header {
+        height: 632px+150px;
+
+        select {
+            width: 270px;
+        }
+
+        #datetime {
+            width: 270px;
+            padding-right: 40px;
+        }
+    }
+
+    .popular-question h3 {
+        font-size: 26px;
+    }
+
+    .accordion__image_margin {
+        width: 20px;
+    }
+
+    .popular-question p {
+        font-size: 22px;
+    }
+
+    .flight-search .painted-btn {
+        width: 270px;
+    }
+
+    .compass-group .we-are-glad {
+        padding-top: 100px;
+    }
+
+    .flight-search {
+        height: 300px;
+    }
+
+    footer br {
+        display: none;
+    }
+
+    footer p {
+        padding-top: 25px;
+        text-align: left;
+    }
+
+    .arrow-pos {
+        left: 260px;
+    }
+
+    .compass-group #map-img {
+        width: 350px;
+        margin-top: 50px;
+    }
+
+    .swiper {
+        padding-left: 0px;
+    }
+
+    .mySwiper {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and(max-width:768px) {
+
+    .header {
+        select {
+            width: 160px;
+        }
+
+        #datetime {
+            width: 160px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+
+    footer p {
+        font-size: 12px;
+
+    }
+
+    footer ul li {
+        font-size: 12px;
+    }
+
+    .reviews p {
+        font-size: 14px;
+    }
+
+    .feedback-rectangle {
+        height: 350px;
+    }
+
+    .feedback-rectangle {
+        width: 220px;
+        height: 420px;
+    }
+
+    .swiper {
+        padding-right: 20px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 0;
+    }
+
+    .feedback-rectangle .feedback-img {
+        width: 24px;
+        right: 20px;
+        bottom: 30px;
+    }
+
+    .popular-question h3 {
+        font-size: 20px;
+    }
+
+    .popular-section h3 {
+        font-size: 20px;
+    }
+
+    footer h3 {
+        font-size: 16px;
+    }
+
+    .benefits p {
+        font-size: 14px;
+    }
+
+    .benefits h4 {
+        font-size: 16px;
+    }
+
+    .compass-group .we-are-glad {
+        padding-top: 120px;
+    }
+
+    .compass-group #map-img {
+        width: 250px;
+    }
+
+    .compass-group h2 {
+        font-size: 30px;
+    }
+
+    .arrow-pos {
+        left: 145px;
+    }
+
+    .flight-search .painted-btn {
+        width: 160px;
+    }
+
+    .popular-question p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and(max-width:540px) {
+    .map_container {
+        display: none;
+    }
+
+    .popular-question {
+        padding: 0px;
+    }
+
+    .popular-card {
+        width: 180px;
+    }
+
+    .popular-text-rectangle {
+        margin-left: 90px;
+    }
+
+    .header {
+        h1 {
+
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        height: 880px;
+
+    }
+
+    .feedback-btn {
+        margin-left: 15px;
+    }
+
+    .popular-section h3 {
+        text-align: center;
+    }
+
+    .popular-section .from-to-text {
+        font-size: 16px;
+
+    }
+
+    #leaveFeedbackBlock {
+        padding-left: auto;
+        padding-right: auto;
+
+    }
+
+    .min-costs {
+        font-size: 14px;
+    }
+
+
+    .compass-group {
+        height: 350px;
+    }
+
+    .popular-question h3 {
+        text-align: center;
+
+
+    }
+
+    .popular-question p {
+        font-size: 14px;
+
+    }
+
+    .feedback-rectangle {
+        width: 90%;
+        min-height: 300px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .accordion__image_margin {
+        width: 12px;
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .container_background {
+        min-height: 550px;
+        height: auto;
+
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    footer ul li {
+        font-size: 14px;
+    }
+
+    footer h3 {
+        font-size: 18px;
+    }
+
+
+}
+
+@media only screen and(max-width:320px) {
+    .header {
+        height: 1100px;
+    }
+
+    .container__burger {
+        display: block;
+    }
+
+    .container__menu {
+        display: none;
+    }
+
+    .padding-to-select {
+        padding-top: 20px;
+    }
+
+    .popular-card {
+        width: 120px;
+    }
+
+    .popular-text-rectangle {
+        margin-left: 30px;
+    }
+
+    .flight-search {
+        width: 95%;
+        height: auto;
+        min-height: 450px;
+
+        label {
+            top: 12px;
+        }
+
+        .img-pos {
+            top: 38px;
+        }
+
+        .arrow-pos {
+            top: 42px;
+        }
+    }
+
+    footer ul li {
+        font-size: 12px;
+
+
+
+
+    }
+
+    .container_background {
+        min-height: 580px;
+    }
+
+    .container__social {
+        width: 100%;
+    }
+    .circle{
+        margin: 0;
+    }
+    .rows-img {
+        display: none;
+    }
+
+    .all-feedback-btn {
+
+
+        a {
+            width: 100px;
+            padding-top: 5px;
+        }
+    }
+
+
+
+
+
+}
